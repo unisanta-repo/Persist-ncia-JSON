@@ -13,5 +13,11 @@ namespace WindowsFormsApp1.Model
         public string Email { get; set; }
         public int Idade { get; set; }
 
+
+        public override string ToString()
+        {
+            return $"{Id}- {Name} ({Email}, {Idade} anos)";
+
+        }
     }
 }

@@ -23,16 +23,27 @@ namespace WindowsFormsApp1.Controller
             return clientes;
         }
 
+        private void SalvarDados()
+        {
+            string json = JsonSerializer.Serialize(clientes, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(filePath, json);
+        }
+
+
         public void CadastrarCliente(string nome, string email, int idade)
         {
-            int novoId = clientes.Count > 0 ? clientes[clientes.Count - 1].Id + 1 : 1;
-            clientes.Add(new Cliente
+            int novoId = clientes.Count > 0 ? clientes[clientes.Count - 1].Id + 1 : 0;
+            Cliente novoCliente = new Cliente
             {
                 Id = novoId,
                 Name = nome,
                 Email = email,
                 Idade = idade
-            });
+            };
+
+            clientes.Add(novoCliente);
+
+            SalvarDados();
         }
     }
 }

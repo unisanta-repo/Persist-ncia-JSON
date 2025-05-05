@@ -43,9 +43,15 @@ namespace WindowsFormsApp1
         {
             string nome = txtb_nome.Text;
             string email = txtb_email.Text;
-            int idade = int.Parse(txtb_idade.Text);
-
-            cc.CadastrarCliente(nome, email, idade);
+            if (int.TryParse(txtb_idade.Text, out int idade))
+            {
+                cc.CadastrarCliente(nome, email, idade);
+                AtualizarLista(); // Atualiza a lista após salvar o cliente
+            }
+            else
+            {
+                MessageBox.Show("Por favor, insira uma idade válida.");
+            }
         }
     }
 }
