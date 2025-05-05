@@ -38,5 +38,14 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void btn_salvar_Click(object sender, EventArgs e)
+        {
+            string nome = txtb_nome.Text;
+            string email = txtb_email.Text;
+            int idade = int.Parse(txtb_idade.Text);
+
+            cc.CadastrarCliente(nome, email, idade);
+        }
     }
 }

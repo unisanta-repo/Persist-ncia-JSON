@@ -22,5 +22,17 @@ namespace WindowsFormsApp1.Controller
 
             return clientes;
         }
+
+        public void CadastrarCliente(string nome, string email, int idade)
+        {
+            int novoId = clientes.Count > 0 ? clientes[clientes.Count - 1].Id + 1 : 1;
+            clientes.Add(new Cliente
+            {
+                Id = novoId,
+                Name = nome,
+                Email = email,
+                Idade = idade
+            });
+        }
     }
 }

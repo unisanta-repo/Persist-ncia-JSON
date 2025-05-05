@@ -76,6 +76,7 @@
             this.btn_salvar.TabIndex = 3;
             this.btn_salvar.Text = "Salvar";
             this.btn_salvar.UseVisualStyleBackColor = true;
+            this.btn_salvar.Click += new System.EventHandler(this.btn_salvar_Click);
             // 
             // btn_atualizar
             // 
