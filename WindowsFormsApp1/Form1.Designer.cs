@@ -31,12 +31,13 @@
             this.lbl_nome = new System.Windows.Forms.Label();
             this.lbl_email = new System.Windows.Forms.Label();
             this.lbl_idade = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_salvar = new System.Windows.Forms.Button();
+            this.btn_atualizar = new System.Windows.Forms.Button();
+            this.btn_deletar = new System.Windows.Forms.Button();
             this.txtb_nome = new System.Windows.Forms.TextBox();
             this.txtb_email = new System.Windows.Forms.TextBox();
             this.txtb_idade = new System.Windows.Forms.TextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lbl_nome
@@ -67,32 +68,32 @@
             this.lbl_idade.TabIndex = 2;
             this.lbl_idade.Text = "Idade";
             // 
-            // button1
+            // btn_salvar
             // 
-            this.button1.Location = new System.Drawing.Point(69, 85);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(655, 31);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_salvar.Location = new System.Drawing.Point(69, 97);
+            this.btn_salvar.Name = "btn_salvar";
+            this.btn_salvar.Size = new System.Drawing.Size(655, 31);
+            this.btn_salvar.TabIndex = 3;
+            this.btn_salvar.Text = "Salvar";
+            this.btn_salvar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_atualizar
             // 
-            this.button2.Location = new System.Drawing.Point(69, 134);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(655, 37);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_atualizar.Location = new System.Drawing.Point(69, 134);
+            this.btn_atualizar.Name = "btn_atualizar";
+            this.btn_atualizar.Size = new System.Drawing.Size(655, 37);
+            this.btn_atualizar.TabIndex = 4;
+            this.btn_atualizar.Text = "Atualizar";
+            this.btn_atualizar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_deletar
             // 
-            this.button3.Location = new System.Drawing.Point(69, 188);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(655, 33);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_deletar.Location = new System.Drawing.Point(69, 335);
+            this.btn_deletar.Name = "btn_deletar";
+            this.btn_deletar.Size = new System.Drawing.Size(655, 33);
+            this.btn_deletar.TabIndex = 5;
+            this.btn_deletar.Text = "Deletar";
+            this.btn_deletar.UseVisualStyleBackColor = true;
             // 
             // txtb_nome
             // 
@@ -115,17 +116,26 @@
             this.txtb_idade.Size = new System.Drawing.Size(100, 20);
             this.txtb_idade.TabIndex = 8;
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(69, 191);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(655, 121);
+            this.listBox1.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.txtb_idade);
             this.Controls.Add(this.txtb_email);
             this.Controls.Add(this.txtb_nome);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_deletar);
+            this.Controls.Add(this.btn_atualizar);
+            this.Controls.Add(this.btn_salvar);
             this.Controls.Add(this.lbl_idade);
             this.Controls.Add(this.lbl_email);
             this.Controls.Add(this.lbl_nome);
@@ -141,12 +151,13 @@
         private System.Windows.Forms.Label lbl_nome;
         private System.Windows.Forms.Label lbl_email;
         private System.Windows.Forms.Label lbl_idade;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_salvar;
+        private System.Windows.Forms.Button btn_atualizar;
+        private System.Windows.Forms.Button btn_deletar;
         private System.Windows.Forms.TextBox txtb_nome;
         private System.Windows.Forms.TextBox txtb_email;
         private System.Windows.Forms.TextBox txtb_idade;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
