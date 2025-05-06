@@ -86,6 +86,7 @@
             this.btn_atualizar.TabIndex = 4;
             this.btn_atualizar.Text = "Atualizar";
             this.btn_atualizar.UseVisualStyleBackColor = true;
+            this.btn_atualizar.Click += new System.EventHandler(this.btn_atualizar_Click);
             // 
             // btn_deletar
             // 
@@ -95,6 +96,7 @@
             this.btn_deletar.TabIndex = 5;
             this.btn_deletar.Text = "Deletar";
             this.btn_deletar.UseVisualStyleBackColor = true;
+            this.btn_deletar.Click += new System.EventHandler(this.btn_deletar_Click);
             // 
             // txtb_nome
             // 

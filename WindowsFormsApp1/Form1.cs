@@ -53,5 +53,42 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Por favor, insira uma idade válida.");
             }
         }
+
+        private void btn_atualizar_Click(object sender, EventArgs e)
+        {
+
+            if (listBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Selecione um cliente para atualizar!");
+                return;
+            }
+
+            var listaClientes = cc.CarregarDados();
+            var clienteSelecionado = listaClientes[listBox1.SelectedIndex];
+
+            clienteSelecionado.Name = txtb_nome.Text == String.Empty ? clienteSelecionado.Name : txtb_nome.Text;
+            clienteSelecionado.Email = txtb_email.Text == String.Empty ? clienteSelecionado.Email : txtb_email.Text;
+            clienteSelecionado.Idade = int.TryParse(txtb_idade.Text, out int idade) ? idade : clienteSelecionado.Idade ;
+
+            listBox1.Items.Clear();
+            cc.SalvarDados();
+            AtualizarLista();
+            LimparCampos();
+            MessageBox.Show("Cliente atualizado com sucesso.");
+            AtualizarLista();
+
+        }
+
+        private void btn_deletar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LimparCampos()
+        {
+            txtb_email.Clear();
+            txtb_idade.Clear();
+            txtb_nome.Clear();
+        }
     }
 }

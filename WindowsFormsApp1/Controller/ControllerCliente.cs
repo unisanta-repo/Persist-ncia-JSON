@@ -23,7 +23,7 @@ namespace WindowsFormsApp1.Controller
             return clientes;
         }
 
-        private void SalvarDados()
+        public void SalvarDados()
         {
             string json = JsonSerializer.Serialize(clientes, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(filePath, json);
