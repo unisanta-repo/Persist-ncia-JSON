@@ -81,6 +81,21 @@ namespace WindowsFormsApp1
 
         private void btn_deletar_Click(object sender, EventArgs e)
         {
+            if (listBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Selecione um cliente para deletar!");
+                return;
+            }
+
+            var listaClientes = cc.CarregarDados();
+            listaClientes.RemoveAt(listBox1.SelectedIndex);
+
+            listBox1.Items.Clear();
+            cc.SalvarDados();
+            AtualizarLista();
+            LimparCampos();
+            MessageBox.Show($"Cliente deletado com sucesso.");
+            AtualizarLista();
 
         }
 
